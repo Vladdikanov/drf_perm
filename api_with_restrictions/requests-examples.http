@@ -14,16 +14,16 @@ Content-Type: application/json
 Authorization: Token 89d883a252bc0e65adadb292869bdd834943ba93
 
 {
-  "title": "Стул IKEA",
+  "title": "Тумба IKEA",
   "description": "Срочно"
 }
 
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/1/
+PATCH {{baseUrl}}/advertisements/2/
 Content-Type: application/json
-Authorization: Token 89d883a252bc0e65adadb292869bdd834943ba93
+Authorization: Token 0c5b6114625435bd45ad68cb347932c96515cf18
 
 {
   "status": "CLOSED"
@@ -32,11 +32,11 @@ Authorization: Token 89d883a252bc0e65adadb292869bdd834943ba93
 ###
 
 # фильтрация по создателю
-GET {{baseUrl}}/advertisements/?creator=3
+GET {{baseUrl}}/advertisements/?id=1
 Content-Type: application/json
 
 ###
 
 # фильтрация по дате
-GET {{baseUrl}}/advertisements/?created_at_before=2020-10-01
+GET {{baseUrl}}/advertisements/?created_at_before=2024-01-01
 Content-Type: application/json
